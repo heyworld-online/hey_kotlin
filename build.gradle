@@ -1,0 +1,22 @@
+buildscript {
+    repositories {
+        maven{
+            url "https://maven.aliyun.com/repository/google"
+        }
+        maven{
+            url "https://maven.aliyun.com/repository/jcenter"
+        }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    group 'online.heworld.kt'
+}

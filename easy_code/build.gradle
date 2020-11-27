@@ -1,0 +1,14 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+group 'online.heworld.kt'
+version 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}
