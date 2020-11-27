@@ -1,9 +1,10 @@
-package online.heworld.kt.http.okhttp
+package online.heyworld.kt.impl.http.okhttp
 
 import okhttp3.MultipartBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.asRequestBody
+import okhttp3.ResponseBody
 import java.io.File
 
 class OkHttpUtil {
@@ -28,6 +29,15 @@ class OkHttpUtil {
                 .build()
             val body = okhttp.newCall(requestBody).execute().body
             return body?.string()?:""
+        }
+
+        fun getBody(url: String):ResponseBody?{
+            val okhttp = OkHttpClient.Builder().build()
+            val requestBody = Request.Builder()
+                    .url(url)
+                    .get()
+                    .build()
+            return okhttp.newCall(requestBody).execute().body
         }
 
         fun uploadFile(url: String, params: Map<String, String>, file: File): String {

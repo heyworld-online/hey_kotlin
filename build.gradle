@@ -18,5 +18,5 @@ buildscript {
 }
 
 allprojects {
-    group 'online.heworld.kt'
+    group 'online.heyworld.kt'
 }

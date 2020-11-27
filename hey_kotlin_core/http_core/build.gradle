@@ -2,7 +2,6 @@ plugins {
     id 'org.jetbrains.kotlin.jvm'
 }
 
-group 'online.heworld.kt'
 version '1.0'
 
 repositories {
