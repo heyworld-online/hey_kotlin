@@ -6,7 +6,7 @@ import java.io.InputStream
 object Http : HttpContract {
     private const val IMPL_CLASS_NAME = "online.heyworld.kt.impl.http.HttpWorker"
 
-    private var httpContract : HttpContract? = null
+    var httpContract : HttpContract? = null
 
     init {
         val instance = Class.forName(IMPL_CLASS_NAME).newInstance()

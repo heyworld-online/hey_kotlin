@@ -7,6 +7,11 @@ buildscript {
             url "https://maven.aliyun.com/repository/jcenter"
         }
         maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        mavenLocal()
+        mavenCentral()
         google()
         jcenter()
     }
@@ -19,4 +24,28 @@ buildscript {
 
 allprojects {
     group 'online.heyworld.kt'
+    version '1.0'
+
+}
+
+task moveReleaseToBuild(){
+    File outputFile = new File(rootProject.buildDir,"outputs/libs/")
+    if(!outputFile.exists()){
+        outputFile.mkdirs()
+    }
+    project.subprojects {
+        File releaseLibDir = new File(buildDir,"libs")
+        println("copy from ${releaseLibDir.absolutePath}")
+        copy {
+            from releaseLibDir.absolutePath
+            into outputFile.absolutePath
+            include("*.jar")
+        }
+    }
+
+//    copy {
+//        from new File(rootDir.absolutePath,"aar_libs").absolutePath
+//        into outputFile.absolutePath
+//        include("*.aar")
+//    }
 }
