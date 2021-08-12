@@ -1,0 +1,7 @@
+java.lang.NullPointerException: Attempt to read from field 'boolean com.threed.jpct.Object3D.oneTextureSet' on a null object reference
+	at com.threed.jpct.GLRenderer.drawVertexArray(GLRenderer.java:2436)
+	at com.threed.jpct.World.draw(World.java:1426)
+	at com.threed.jpct.World.draw(World.java:1109)
+	at com.pencilstub.android.page.virtual.world.ui.main.VirtualWorldActivity$MyRenderer.onDrawFrame(VirtualWorldActivity.java:630)
+	at android.opengl.GLSurfaceView$GLThread.guardedRun(GLSurfaceView.java:1591)
+	at android.opengl.GLSurfaceView$GLThread.run(GLSurfaceView.java:1272)

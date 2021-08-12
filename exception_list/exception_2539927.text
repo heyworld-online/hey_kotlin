@@ -1,0 +1,24 @@
+java.lang.IllegalStateException: Could not execute method for android:onClick
+	at androidx.appcompat.app.AppCompatViewInflater$DeclaredOnClickListener.onClick(AppCompatViewInflater.java:414)
+	at android.view.View.performClick(View.java:7570)
+	at com.google.android.material.button.MaterialButton.performClick(MaterialButton.java:992)
+	at android.view.View.performClickInternal(View.java:7525)
+	at android.view.View.access$3900(View.java:836)
+	at android.view.View$PerformClick.run(View.java:28680)
+	at android.os.Handler.handleCallback(Handler.java:938)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:260)
+	at android.app.ActivityThread.main(ActivityThread.java:8245)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:612)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1006)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.lang.reflect.Method.invoke(Native Method)
+	at androidx.appcompat.app.AppCompatViewInflater$DeclaredOnClickListener.onClick(AppCompatViewInflater.java:409)
+	... 12 more
+Caused by: java.lang.IndexOutOfBoundsException: Index: -1, Size: 0
+	at java.util.LinkedList.checkElementIndex(LinkedList.java:555)
+	at java.util.LinkedList.remove(LinkedList.java:525)
+	at com.pencilstub.android.page.virtual.world.ui.main.VirtualWorldActivity.removeRole(VirtualWorldActivity.java:523)
+	at com.pencilstub.android.page.virtual.world.ui.main.VirtualWorldActivity.removeRole(VirtualWorldActivity.java:446)
+	... 14 more
